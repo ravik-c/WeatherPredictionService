@@ -20,7 +20,8 @@ namespace WeatherPredictionService.Manager
         }
 
         /// <summary>
-        /// This method requests the weather forecast DTO and maps it to a WeatherForecast object
+        /// This method requests the weather forecast DTO and maps it to a WeatherForecast object. This also houses the logic to convert the datetime to the Julian day for easier retrieval of data
+        /// Any other business logic can be added at this layer.
         /// </summary>
         /// <param name="requestedDate"></param>
         /// <returns></returns>

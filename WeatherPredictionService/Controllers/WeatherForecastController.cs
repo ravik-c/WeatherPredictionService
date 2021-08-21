@@ -9,7 +9,8 @@ using WeatherPredictionService.Manager;
 namespace WeatherPredictionService.Controllers
 {
     /// <summary>
-    /// Api controller that houses the endpoints we have
+    /// Api controller that houses the endpoints we have. This only does the request validations. No other business logic will exist here.
+    /// All business logic will be handled at the manager layer.
     /// </summary>
     [ApiController]
     [Route("[controller]/{year?}/{month?}/{day?}")]
@@ -25,6 +26,13 @@ namespace WeatherPredictionService.Controllers
             _weatherManager = weatherManager;
         }
 
+        /// <summary>
+        /// Get Endpoint that returns the forecast data as a JSON object. If nothing is passed, returns data for the current date.
+        /// </summary>
+        /// <param name="year">year as number</param>
+        /// <param name="month">month as number</param>
+        /// <param name="day">day as number</param>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get(int? year, int? month, int? day)
         {
