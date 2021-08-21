@@ -18,3 +18,7 @@ Run using the command,
 ` dotnet run `
 
 The project launches using the port 5001 by default. Below is the usual localhost address https://localhost:5001/weatherforecast
+
+For any specific date, use eg. https://localhost:5001/weatherforecast/2021/4/5 (For April 5th) 
+
+Note: As noted in the assumption, the endpoint will notify if the date is in the past.
