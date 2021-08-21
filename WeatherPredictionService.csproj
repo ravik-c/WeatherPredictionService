@@ -6,9 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Tests\" />
-    <Folder Include="Manager\Tests\" />
-    <Folder Include="Repository\Tests\" />
     <Folder Include="Resources\" />
   </ItemGroup>
 

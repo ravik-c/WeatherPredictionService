@@ -20,11 +20,8 @@ namespace WeatherPredictionService.Controllers
 
         private readonly IWeatherManager _weatherManager;
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherManager weatherManager)
+        public WeatherForecastController(IWeatherManager weatherManager)
         {
-            _logger = logger;
             _weatherManager = weatherManager;
         }
 
@@ -41,7 +38,7 @@ namespace WeatherPredictionService.Controllers
             } else
             {
                 
-                DateTime.TryParse(String.Format("{0}-{1}-{2}", year.Value, month.Value, day.Value), out requestForDateTime);
+                DateTime.TryParse(String.Format("{0}-{1}-{2}", year != null ? year.Value:0, month != null? month.Value : 0, day != null ?day.Value:0), out requestForDateTime);
 
                 if (requestForDateTime == DateTime.MinValue)
                 {
