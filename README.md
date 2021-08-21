@@ -10,7 +10,8 @@ Invalid date will return a bad request error
 # Running the project To run the project,
 
 Download the solution to a directory.
-Go to project root folder in command terminal and use the command,
+Go to project root folder in command terminal.
+Go down one level to the WeatherPredictionService folder, which houses the WeatherPredictionService.csproj file, and use the command,
 ` dotnet build `
 
 Run using the command,
