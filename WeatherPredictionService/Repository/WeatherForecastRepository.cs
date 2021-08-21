@@ -15,13 +15,13 @@ namespace WeatherPredictionService.Repository
     /// </summary>
     public class WeatherForecastRepository : IWeatherForecastRepository
     {
-        List<WeatherForecastDTO> weatherForecasts;
+        IEnumerable<WeatherForecastDTO> weatherForecasts;
         public WeatherForecastRepository()
         {
             using (var reader = new StreamReader(@"./Resources/RduWeatherDataDump.csv"))
             using(var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
-                weatherForecasts = csv.GetRecords<WeatherForecastDTO>().ToList<WeatherForecastDTO>();
+                weatherForecasts = csv.GetRecords<WeatherForecastDTO>().ToList();
             }
         }
         /// <summary>
